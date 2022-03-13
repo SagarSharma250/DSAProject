@@ -132,9 +132,12 @@ def patterns():
             mybutton.destroy()
 
     top=Toplevel()
-    entries = [Entry(top,width=100,font=('Arial', 20)) for _ in range(2)]
+    label = Label(top, text="ENTER THE STRING:", font=25).pack()
+    entries = [Entry(top, width=100, borderwidth=5) for _ in range(2)]
     for entry in entries:
-        entry.pack(pady=20,padx=20)
+        if (entry == entries[1]):
+            label = Label(top, text="ENTER THE PATTERN TO BE SEARCHED:", font=20).pack()
+        entry.pack(padx=10, pady=10)
     submmit = Button(top, text="CLICK TO SUBMIT", font=100, bg="#E3DFD7", padx=50, pady=20,command=lambda: click(entries)).pack(pady=20)
 
 

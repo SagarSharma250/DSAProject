@@ -12,4 +12,5 @@ def generatesub(a):
             j = j+1
         b.append(sub)
         i = i+1
+
     return b
